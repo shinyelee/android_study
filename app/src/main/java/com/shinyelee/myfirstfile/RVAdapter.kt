@@ -3,6 +3,7 @@ package com.shinyelee.myfirstfile
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
 class RVAdapter(val items : MutableList<String>) : RecyclerView.Adapter<RVAdapter.ViewHolder>() {
@@ -12,7 +13,17 @@ class RVAdapter(val items : MutableList<String>) : RecyclerView.Adapter<RVAdapte
         return ViewHolder(view)
     }
 
+    interface ItemClick {
+        fun onClick(view : View, position: Int)
+    }
+    var itemClick : ItemClick? = null
+
     override fun onBindViewHolder(holder: RVAdapter.ViewHolder, position: Int) {
+        if(itemClick != null) {
+            holder.itemView.setOnClickListener { v->
+                itemClick?.onClick(v, position)
+            }
+        }
         holder.bindItems(items[position])
     }
 
@@ -23,6 +34,8 @@ class RVAdapter(val items : MutableList<String>) : RecyclerView.Adapter<RVAdapte
 
     inner class ViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView) {
         fun bindItems(item : String) {
+            val rv_text = itemView.findViewById<TextView>(R.id.rvItem)
+            rv_text.text = item
         }
     }
 }

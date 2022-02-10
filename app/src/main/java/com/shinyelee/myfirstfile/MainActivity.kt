@@ -2,6 +2,8 @@ package com.shinyelee.myfirstfile
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
@@ -20,5 +22,11 @@ class MainActivity : AppCompatActivity() {
         val rvAdapter = RVAdapter(items)
         rv.adapter = rvAdapter
         rv.layoutManager = LinearLayoutManager(this)
+        rvAdapter.itemClick = object : RVAdapter.ItemClick {
+            override fun onClick(view: View, position: Int) {
+                Toast.makeText(baseContext, items[position], Toast.LENGTH_LONG).show()
+            }
+
+        }
     }
 }
