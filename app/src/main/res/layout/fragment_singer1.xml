@@ -5,7 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".singer1Fragment">
+    tools:context=".Singer1Fragment">
+
+    <TextView
+        android:text="1번"
+        android:textSize="40sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints" />
 
     <!-- TODO: Update blank fragment layout -->
     <LinearLayout

@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/singer1Fragment"
-        android:name="com.shinyelee.myfirstfile.singer1Fragment"
+        android:name="com.shinyelee.myfirstfile.Singer1Fragment"
         android:label="fragment_singer1"
         tools:layout="@layout/fragment_singer1" >
         <action
@@ -19,7 +19,7 @@
     </fragment>
     <fragment
         android:id="@+id/singer2Fragment"
-        android:name="com.shinyelee.myfirstfile.singer2Fragment"
+        android:name="com.shinyelee.myfirstfile.Singer2Fragment"
         android:label="fragment_singer2"
         tools:layout="@layout/fragment_singer2" >
         <action
@@ -31,7 +31,7 @@
     </fragment>
     <fragment
         android:id="@+id/singer3Fragment"
-        android:name="com.shinyelee.myfirstfile.singer3Fragment"
+        android:name="com.shinyelee.myfirstfile.Singer3Fragment"
         android:label="fragment_singer3"
         tools:layout="@layout/fragment_singer3" >
         <action
