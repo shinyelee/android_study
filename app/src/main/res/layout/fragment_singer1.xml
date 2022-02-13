@@ -8,11 +8,21 @@
     tools:context=".Singer1Fragment">
 
     <TextView
-        android:text="1번"
-        android:textSize="40sp"
+        android:text="오마이걸 타이틀 모음"
+        android:textSize="30sp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:background="@color/black"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         tools:ignore="MissingConstraints" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/singRV"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="80dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 
     <!-- TODO: Update blank fragment layout -->
     <LinearLayout
